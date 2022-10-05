@@ -1,0 +1,26 @@
+<Window x:Class="Window10AddToStartMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Window10AddToStartMenu"
+        mc:Ignorable="d"
+        Title="Context command registration" 
+        Height="100" Width="376"
+        WindowStartupLocation="CenterScreen"
+        d:DataContext="{d:DesignInstance local:MainWindow, IsDesignTimeCreatable=True}" ResizeMode="NoResize">
+    <Grid>
+		<StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="0" x:Name="PanelRegister">
+				<Label>Register command in "Send To" context menu:</Label>
+				<Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Margin="3" Click="RegButton_Click">Register</Button>
+			</StackPanel>
+			<StackPanel Orientation="Horizontal" Margin="0" x:Name="PanelRegistered">
+				<Label Content="Unregister command:"/>
+				<Button VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Margin="3" Click="Button_Click">Unregister</Button>
+			</StackPanel>
+			<Separator></Separator>
+			<Button VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Margin="3" Click="CloseButton_Click">Close</Button>
+		</StackPanel>
+	</Grid>
+</Window>

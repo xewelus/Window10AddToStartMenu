@@ -1,0 +1,3 @@
+[submodule "CSCommon"]
+	path = CSCommon
+	url = https://github.com/xewelus/CSCommon.git

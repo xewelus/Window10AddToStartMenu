@@ -1,0 +1,11 @@
+.vs/
+code/Backup/
+code/UpgradeLog.htm
+*/**/bin/Debug
+*/**/bin/Release
+*/**/obj/Debug
+*/**/obj/Release
+_ReSharper.Caches/
+*.suo
+/Window10AddToStartMenu/obj/
+*.csproj.user

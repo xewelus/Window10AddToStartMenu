@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<TargetFramework>net48</TargetFramework>
+		<OutputType>WinExe</OutputType>
+		<RootNamespace>Window10AddToStartMenu</RootNamespace>
+		<AssemblyName>Window10AddToStartMenu</AssemblyName>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<UseWPF>true</UseWPF>
+		<LangVersion>latest</LangVersion>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="changes.txt" />
+	</ItemGroup>
+	<ItemGroup>
+	  <COMReference Include="IWshRuntimeLibrary">
+	    <WrapperTool>tlbimp</WrapperTool>
+	    <VersionMinor>0</VersionMinor>
+	    <VersionMajor>1</VersionMajor>
+	    <Guid>f935dc20-1cf0-11d0-adb9-00c04fd58a0b</Guid>
+	    <Lcid>0</Lcid>
+	    <Isolated>false</Isolated>
+	    <EmbedInteropTypes>true</EmbedInteropTypes>
+	  </COMReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="app.ico" />
+	  <Content Include="changes.txt">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\CSCommon\CommonWpf\CommonWpf.csproj" />
+	  <ProjectReference Include="..\CSCommon\Common\Common.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="Microsoft.CSharp" />
+	  <Reference Include="PresentationCore" />
+	  <Reference Include="PresentationFramework" />
+	  <Reference Include="System.Xaml" />
+	  <Reference Include="WindowsBase" />
+	</ItemGroup>
+</Project>
