@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Window10AddToStartMenu"
         mc:Ignorable="d"
-        Title="Context command registration" 
+        Title="AddToStartMenu" 
         Height="100" Width="376"
         WindowStartupLocation="CenterScreen"
         d:DataContext="{d:DesignInstance local:MainWindow, IsDesignTimeCreatable=True}" ResizeMode="NoResize">

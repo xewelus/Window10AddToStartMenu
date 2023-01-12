@@ -27,17 +27,24 @@ namespace Window10AddToStartMenu
 
 					string startFolder = Environment.GetFolderPath(Environment.SpecialFolder.StartMenu);
 					string fileName = Path.GetFileName(appPath);
-					string shortcutPath = Path.Combine(startFolder, fileName + ".lnk");
 
-					if (File.Exists(shortcutPath))
+					NameDlg dlg = new NameDlg();
+					dlg.EnteredName = Path.GetFileNameWithoutExtension(fileName);
+					if (dlg.ShowDialog() == true)
 					{
-						UIHelper.ShowMessage($"Shortcut '{shortcutPath}' already exists.");
-						return;
+						string shortcutPath = Path.Combine(startFolder, dlg.EnteredName + ".lnk");
+
+						if (File.Exists(shortcutPath))
+						{
+							UIHelper.ShowMessage($"Shortcut '{shortcutPath}' already exists.");
+							return;
+						}
+
+						Window10AddToStartMenu.MainWindow.CreateShortcut(appPath, shortcutPath, dlg.EnteredName);
+
+						UIHelper.ShowMessage("Shortcut successfully created.");
 					}
-
-					Window10AddToStartMenu.MainWindow.CreateShortcut(appPath, shortcutPath, "TEST");
-
-					UIHelper.ShowMessage(shortcutPath);
+					
 					Environment.Exit(0);
 					return;
 				}

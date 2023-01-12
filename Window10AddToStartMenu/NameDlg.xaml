@@ -1,0 +1,23 @@
+﻿<Window x:Class="Window10AddToStartMenu.NameDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Window10AddToStartMenu"
+		WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="AddToStartMenu" Height="100" Width="440">
+	<Grid>
+		<StackPanel Width="422">
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+				<Label VerticalAlignment="Center">Enter shortcut name:</Label>
+				<TextBox x:Name="NameTextBox" VerticalAlignment="Center" Width="300" TextChanged="NameTextBox_TextChanged"></TextBox>
+			</StackPanel>
+			<Separator />
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+				<Button x:Name="OkButton" Width="100" Margin="3" IsEnabled="False" Click="OkButton_Click">OK</Button>
+				<Button Width="100" Margin="3" Click="CancelButton_Click">Cancel</Button>
+			</StackPanel>
+		</StackPanel>
+	</Grid>
+</Window>
