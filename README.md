@@ -1,0 +1,1 @@
+Program for create shortcuts of selected app in Windows 10 Start Menu from context menu of "Send To".
